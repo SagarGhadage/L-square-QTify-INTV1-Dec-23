@@ -1,10 +1,8 @@
 import './App.css';
-import Button from './components/Button/Button';
-import Search from './components/Search/Search';
+import Navbar from './components/Navbar/Navbar';
 function App() {
   return (<>
-  <Search placeH={"Search a album of your choice"}/>
-  <Button>Give feedback</Button>
+  <Navbar></Navbar>
     </>
   );
 }
