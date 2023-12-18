@@ -29,3 +29,11 @@
     letter-spacing: 1px;
     text-align: left;
 }
+.qtifyLogo{
+    position: absolute;
+    top:30px;
+    left: 38px;
+    height: 24px;
+    /* width: 16px; */
+    /* padding: 10px 0 0 1px; */
+}

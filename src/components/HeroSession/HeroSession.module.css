@@ -1,0 +1,34 @@
+.heroSession{   
+    height: 270px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 56px; */
+}
+.hero_inner{
+    height: 212px;
+    width: 799px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heroTxtGP{
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    height: 100px;
+    width: 556px;
+}
+.hero_txt1{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+}
+.hero_txt2{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+}
