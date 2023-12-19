@@ -9,7 +9,7 @@ function App() {
     <Navbar>
       <Logo />
       <Search placeH={"Search a album of your choice"} />
-      <Button>Give feedback</Button>
+      <Button>Give Feedback</Button>
     </Navbar>
     <HeroSession />
   </>
