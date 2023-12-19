@@ -1,5 +1,5 @@
 import React from "react";
 import styles from "./Button.module.css";
 export default function Button({children}) {
-    return <button className={styles.button} type="button">{children}</button>
+    return <button className={styles.feedbackButton} type="button">{children}</button>
 }
