@@ -29,6 +29,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
+a,a:hover,a:active{text-decoration: none;color: inherit;}
 input,
 button,
 textarea,
