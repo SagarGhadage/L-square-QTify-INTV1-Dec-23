@@ -9,7 +9,7 @@ import CarousalLeftNav from './CarousalLeftNav/CarousalLeftNav';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
-export default function Carousal({data,renderComponent,type}) {
+export default function Carousal({data,Component,type}) {
 
   return (
     <div className={styles.carousalC}>
@@ -29,7 +29,7 @@ export default function Carousal({data,renderComponent,type}) {
     >
       <CarousalRightNav/>
       {data.map((item)=>
-          <SwiperSlide key={item.id}>{renderComponent(item)}</SwiperSlide>
+          <SwiperSlide key={item.id}>{Component(item)}</SwiperSlide>
           )}   
           <CarousalLeftNav/>
 {/* {component} */}

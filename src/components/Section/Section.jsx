@@ -17,7 +17,7 @@ export default function Section({ data,type,title }) {
             {data.length === 0 ? <div className={styles.circularProgress}><CircularProgress /></div> : (
                 <div className={styles.cards}>
                     {isCarousal ? (
-                    <Carousal data={data} renderComponent={(data)=><Card data={data} type={type}/>}  />
+                    <Carousal data={data} Component={(data)=><Card data={data} type={type}/>}  />
                     ) : (<div  className={styles.cardGroup}>
                         {data.map((item)=><Card key={item.id} data={item} type={type}/>
                         )
