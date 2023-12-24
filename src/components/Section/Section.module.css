@@ -11,13 +11,13 @@
     cursor: pointer;
 }
 .cards{
-    display: flex;
+    /* display: flex; */
     margin: 18px 0 0 0;
-    gap:6px
+    /* gap:6px   */
 }
 .cardGroup{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 40px;
 }

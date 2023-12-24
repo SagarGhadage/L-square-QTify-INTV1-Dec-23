@@ -29,7 +29,17 @@ h6 {
   overflow-wrap: break-word;
 }
 
-a,a:hover,a:active{text-decoration: none;color: inherit;}
+.swiper-slide {
+  width: auto !important;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 input,
 button,
 textarea,
@@ -44,7 +54,16 @@ body {
   background-color: var(--color-black);
   color: var(--color-white);
 }
-#root,__next{
+
+#root,
+__next {
   isolation: isolate;
 }
-img,picture,svg,canvas{display: block;max-width: 100%;}
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}

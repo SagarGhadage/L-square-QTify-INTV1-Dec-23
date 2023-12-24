@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styles from "./Section.module.css";
 import Card from "../Card/Card";
 import { CircularProgress } from "@mui/material";
+import Carousal from "../Carousal/Carousal";
 export default function Section({ data,type,title }) {
-    const [isCarousal, setIsCarousal] = useState(false)
+    const [isCarousal, setIsCarousal] = useState(true)
     const handleCollaps = () => {
         setIsCarousal(!isCarousal)
     }
@@ -15,9 +16,9 @@ export default function Section({ data,type,title }) {
         <div>
             {data.length === 0 ? <div className={styles.circularProgress}><CircularProgress /></div> : (
                 <div className={styles.cards}>
-                    {isCarousal ? (<>
-                    C
-                    </>) : (<div  className={styles.cardGroup}>
+                    {isCarousal ? (
+                    <Carousal data={data} renderComponent={(data)=><Card data={data} type={type}/>}  />
+                    ) : (<div  className={styles.cardGroup}>
                         {data.map((item)=><Card key={item.id} data={item} type={type}/>
                         )
                     }
