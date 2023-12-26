@@ -7,7 +7,7 @@ import Logo from './components/Logo/Logo';
 import Navbar from './components/Navbar/Navbar';
 import Search from './components/Search/Search';
 import { Outlet } from 'react-router-dom';
-import { fetchNewAlbum, fetchSongs, fetchTopAlbum } from './api/api';
+import { fetchFilters, fetchNewAlbum, fetchSongs, fetchTopAlbum } from './api/api';
 function App() {
   const [searchData, SetSearchData] = useState([]);
   const [data, setData] = useState({})
@@ -19,6 +19,7 @@ function App() {
     });
   }
   useEffect(() => {
+    generateData("genres",fetchFilters)
     generateData("topAlbum", fetchTopAlbum);
     generateData("newAlbum", fetchNewAlbum);
     generateData("songs", fetchSongs);
@@ -26,7 +27,8 @@ function App() {
   const {
     topAlbum = [],
     newAlbum = [],
-    songs = []
+    songs = [],
+    genres=[],
   } = data;
 
   return (<>
@@ -35,7 +37,7 @@ function App() {
       <Search placeH={"Search a album of your choice"} />
       <Button>Give Feedback</Button>
     </Navbar>
-    <Outlet context={{data:{topAlbum,newAlbum,songs}}}/>
+    <Outlet context={{data:{topAlbum,newAlbum,songs,genres}}}/>
     {/* <HeroSession /> */}
     {/* <Card data ={{}}type={"song"}/> */}
     {/* <Card data ={{}}type={"album"}/> */}
