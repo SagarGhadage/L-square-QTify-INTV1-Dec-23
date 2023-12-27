@@ -51,5 +51,8 @@ export default function Section({ data,type,title,filters }) {
                 )
             )}
         </div>
+        {(title==="Top Album"&&(!isCarousal))&&
+                    <hr className={styles.hr}/>
+                }
     </div>
 }
