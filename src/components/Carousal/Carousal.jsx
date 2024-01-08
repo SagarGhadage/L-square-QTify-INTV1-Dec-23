@@ -10,7 +10,7 @@ import CarousalLeftNav from './CarousalLeftNav/CarousalLeftNav';
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
 export default function Carousal({data,Component,type}) {
-
+console.log(Component,data)
   return (
     <div className={styles.carousalC}>
     <Swiper

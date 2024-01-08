@@ -7,7 +7,7 @@ import Logo from './components/Logo/Logo';
 import Navbar from './components/Navbar/Navbar';
 import Search from './components/Search/Search';
 import { Outlet } from 'react-router-dom';
-import { fetchFilters, fetchNewAlbum, fetchSongs, fetchTopAlbum } from './api/api';
+import { fetchFilters, fetchNewAlbum, fetchSongs, fetchTopAlbum, fetchFaq } from './api/api';
 function App() {
   const [searchData, SetSearchData] = useState([]);
   const [data, setData] = useState({})
@@ -19,25 +19,27 @@ function App() {
     });
   }
   useEffect(() => {
-    generateData("genres",fetchFilters)
+    generateData("genres", fetchFilters)
     generateData("topAlbum", fetchTopAlbum);
     generateData("newAlbum", fetchNewAlbum);
     generateData("songs", fetchSongs);
+    generateData("faqData", fetchFaq);
   }, []);
   const {
     topAlbum = [],
     newAlbum = [],
     songs = [],
-    genres=[],
+    genres = [],
+    faqData = [],
   } = data;
 
   return (<>
-    <Navbar searchData={[...topAlbum,newAlbum]}>
+    <Navbar searchData={[...topAlbum, newAlbum]}>
       <Logo />
       <Search placeH={"Search a album of your choice"} />
       <Button>Give Feedback</Button>
     </Navbar>
-    <Outlet context={{data:{topAlbum,newAlbum,songs,genres}}}/>
+    <Outlet context={{ data: { topAlbum, newAlbum, songs, genres,faqData } }} />
     {/* <HeroSession /> */}
     {/* <Card data ={{}}type={"song"}/> */}
     {/* <Card data ={{}}type={"album"}/> */}
