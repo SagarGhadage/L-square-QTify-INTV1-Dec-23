@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Button from './components/Button/Button';
+import Button, { btnTypes } from './components/Button/Button';
 import Card from './components/Card/Card';
 import HeroSession from './components/HeroSession/HeroSession';
 import Logo from './components/Logo/Logo';
@@ -37,9 +37,9 @@ function App() {
     <Navbar searchData={[...topAlbum, newAlbum]}>
       <Logo />
       <Search placeH={"Search a album of your choice"} />
-      <Button>Give Feedback</Button>
+      <Button btnType={btnTypes.feedBack}>Give Feedback</Button>
     </Navbar>
-    <Outlet context={{ data: { topAlbum, newAlbum, songs, genres,faqData } }} />
+    <Outlet context={{ data: { topAlbum, newAlbum, songs, genres, faqData } }} />
     {/* <HeroSession /> */}
     {/* <Card data ={{}}type={"song"}/> */}
     {/* <Card data ={{}}type={"album"}/> */}

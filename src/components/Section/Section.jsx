@@ -16,7 +16,7 @@ export default function Section({ data,type,title,filters }) {
         filteredDataArray.push(...filters.map((ele)=> data.filter((song)=>song.genre.key===ele.key)))
         console.log(data,filters,filteredDataArray,)
     }
-    function mapFilterdItem(dataArr){   
+    function mapFilterdItem(dataArr){
         // console.log("f",dataArr)
         return dataArr.map((arr)=>{
             return <Carousal data={arr} Component={(arr)=><Card data={arr} type={type}/>}  />       
